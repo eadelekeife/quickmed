@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,6 +7,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --base: #6C737F;
+  --primary: #662FFF;
+  --header-text: #141C53;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +19,108 @@
   }
 }
 
+html,
 body {
-  color: var(--foreground);
+  color: var(--base);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--header-text);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.ant-collapse-item {
+  background: #fff;
+  padding: 1% 0px;
+  margin-bottom: 1rem;
+  box-shadow: 1px 2px 50px rgba(0, 0, 0, 0.06);
+  border-radius: 8px !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.ant-collapse-item .ant-collapse-header-text {
+  font-size: 1.1rem !important;
+}
+
+.anticon.ant-collapse-arrow svg {
+  font-size: 1.1rem;
+}
+
+.main-bg {
+  position: relative;
+  background: linear-gradient(45deg, #662FFF, #662FFF);
+  z-index: 1;
+  overflow: hidden;
+  background-clip: padding-box;
+}
+
+.main-bg::before {
+  content: '';
+  /* Creates the pseudo-element */
+  position: absolute;
+  /* Positions the pseudo-element relative to the button */
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #FFFFFF33, rgba(255, 255, 255, 0));
+  /* Gradient background */
+  border-radius: 50px;
+  /* Must match or exceed the button's border-radius */
+  z-index: -1;
+  /* Ensures the pseudo-element stays behind the button content */
+  padding: 5px;
+}
+
+.main-bg {
+  background: #662FFF;
+  background: linear-gradient(45deg, #662FFF, #662FFF);
+}
+
+.how-single .foot-action {
+  position: absolute;
+  bottom: 0%;
+  padding: 1.5rem 0px;
+  left: 0px;
+}
+
+.how-single {
+  position: relative;
+}
+
+.final {
+  position: relative;
+  background: linear-gradient(0deg, #0B091C, #0B091C),
+    linear-gradient(0deg, rgba(11, 9, 28, 0) 0%, rgba(102, 47, 255, 0.18) 100%),
+    linear-gradient(174.1deg, rgba(11, 9, 28, 0) 56.76%, rgba(21, 94, 239, 0.04) 82.71%);
+}
+
+.final .star-icon {
+  background: #ff0000;
+  background: url("/public/Star.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 10;
 }
