@@ -84,7 +84,7 @@ export default function Home() {
             <Link className="text-base font-[500] py-5 px-8 main-bg text-white rounded-full w-max mx-auto" href="">Book a Demo</Link>
           </div>
           <div>
-            <Image src={HeroImg} alt="people in the hospital" width={0} height={0} style={{ width: "100%", height: "100%" }} />
+            <Image src={HeroImg} alt="people in the hospital" className="mt-16" width={0} height={0} style={{ width: "100%", height: "100%" }} />
           </div>
         </div>
         <div>
@@ -97,7 +97,7 @@ export default function Home() {
             <Image src={Logo_6} alt="sisyphus" width={0} height={0} style={{ width: "auto", height: "auto" }} />
           </div>
         </div>
-        <div className="w-[70%] mx-auto mt-32">
+        <div className="w-[70%] mx-auto mt-36">
           <div className="text-center w-[55%] mx-auto">
             <h3 className="text-4xl font-[600] mb-4 leading-snug">Less time on paperwork, more time with patients</h3>
             <p>Discover the features that make clinical notes effortless</p>
@@ -125,7 +125,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-[70%] mx-auto mt-32">
+        <div className="w-[70%] mx-auto mt-36">
           <div className="text-center w-[55%] mx-auto">
             <h3 className="text-4xl font-[600] mb-4 leading-snug">How It Works</h3>
             <p>Simple Steps to Create and Save Patient Documents in Minutes</p>
@@ -235,7 +235,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-[70%] mx-auto mt-32">
+        <div className="w-[70%] mx-auto mt-36">
           <div className="text-center w-[80%] mx-auto">
             <h3 className="text-4xl font-[600] mb-4 leading-snug">Got Questions? We&apos;ve Got Answers!</h3>
             <p>Get the Information you need to use our tool.</p>
